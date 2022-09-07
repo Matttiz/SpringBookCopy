@@ -2,11 +2,9 @@ package utils;
 
 import lombok.SneakyThrows;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import java.io.*;
 
-public class ReadFile {
+public class FileUtilities {
 
 
     @SneakyThrows
@@ -21,4 +19,12 @@ public class ReadFile {
         }
         return content;
     };
+
+    @SneakyThrows
+    public static void write(String path, String content){
+        FileWriter file = new FileWriter(path);
+        BufferedWriter writer = new BufferedWriter(file);
+        writer.write(content);
+        writer.close();
+    }
 }
