@@ -7,7 +7,7 @@ import java.util.*;
 
 public class App {
     public static void main(String[] args) {
-       Path pathToOriginal = Paths.get(System.getProperty("user.dir"),"src", "main", "resources", "original", "orginal.txt");
+       Path pathToOriginal = Paths.get(System.getProperty("user.dir"),"src", "main", "resources", "original", "gradle.txt");
        String primal = FileUtilities.read(pathToOriginal.toString());
        List<String> arrayOfPrimalChars = Encoder.encodedList(primal);
        String decodedString =  Encoder.decode(arrayOfPrimalChars);
