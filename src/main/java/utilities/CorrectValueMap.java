@@ -1,6 +1,4 @@
-package utils;
-
-import lombok.SneakyThrows;
+package utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -14,7 +12,7 @@ public class CorrectValueMap {
 
     static {
         try {
-            Path path = Paths.get(System.getProperty("user.dir"),"src", "main", "java", "utils", "characters.properties");
+            Path path = Paths.get(System.getProperty("user.dir"),"src", "main", "java", "utilities", "characters.properties");
             InputStream input = new FileInputStream(path.toString());
             properties.load(input);
         } catch (IOException e) {

@@ -1,5 +1,5 @@
-import utils.Encoder;
-import utils.FileUtilities;
+import utilities.Encoder;
+import utilities.FileUtilities;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -13,7 +13,7 @@ public class App {
        String decodedString =  Encoder.decode(arrayOfPrimalChars);
        System.out.println();
        System.out.println(decodedString);
-        Path pathToConvert = Paths.get(System.getProperty("user.dir"),"src", "main", "resources", "convert", pathToOriginal.getFileName().toString());
-        FileUtilities.write(pathToConvert.toString(), decodedString);
+       Path pathToConvert = Paths.get(System.getProperty("user.dir"),"src", "main", "resources", "convert", pathToOriginal.getFileName().toString());
+       FileUtilities.write(pathToConvert.toString(), decodedString);
     }
 }
