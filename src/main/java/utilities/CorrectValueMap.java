@@ -12,7 +12,9 @@ public class CorrectValueMap {
 
     static {
         try {
-            Path path = Paths.get(System.getProperty("user.dir"),"src", "main", "java", "utilities", "characters.properties");
+//            Path path = Paths.get(System.getProperty("user.dir"),"src", "main", "java", "utilities", "characters.properties");
+            Path path = Paths.get(System.getProperty("user.dir"), "characters.properties");
+            System.out.println(path);
             InputStream input = new FileInputStream(path.toString());
             properties.load(input);
         } catch (IOException e) {

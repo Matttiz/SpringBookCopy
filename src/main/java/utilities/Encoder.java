@@ -17,14 +17,17 @@ public class Encoder {
 
     public static String decode(List<String> arrayOfPrimalChars){
         StringBuilder character = new StringBuilder();
-        String sdsa ;
-        for(String s : arrayOfPrimalChars){
-            System.out.println("1 string: "+ s);
-            sdsa = CorrectValueMap.getValue(s);
-            System.out.println("2 code: " + StringUtils.escapeNonAscii(s));
-            System.out.println("3 value: "+ sdsa);
-            character.append(CorrectValueMap.getValue(s));
+        String decodedString ;
+        for(String encodedChar : arrayOfPrimalChars){
+            decodedString = CorrectValueMap.getValue(encodedChar);
+            if (decodedString == null) {
+                System.out.println("1 string: " + encodedChar);
+                System.out.println("2 code: " + StringUtils.escapeNonAscii(encodedChar));
+                System.out.println("3 value: "+ decodedString);
+            }
+            character.append(CorrectValueMap.getValue(encodedChar));
         }
         return character.toString();
+
     }
 }
